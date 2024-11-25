@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Nutri+</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="calculadora" class="page">
+
+                <!-- Top Navbar -->
+                <div class="top-nav">
+                    <a href="#" class="btn-refresh">
+                        <i class="mdi mdi-chat-outline"></i>
+                    </a>
+                    <h1 class="title-logo-1"><span>Nutri</span>+</h1>
+                    <a href="#" class="btn-notification" data-count="2">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>    
+                <div class="tmb-calculator">
+                    <h1>Calculadora de TMB</h1>
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="feminino">Feminino</option>
+                    </select>
+            
+                    <label for="idade">Idade (anos):</label>
+                    <input type="number" id="idade" placeholder="Digite sua idade" min="0">
+            
+                    <label for="peso">Peso (kg):</label>
+                    <input type="number" id="peso" placeholder="Digite seu peso" min="0">
+            
+                    <label for="altura">Altura (cm):</label>
+                    <input type="number" id="altura" placeholder="Digite sua altura" min="0">
+
+                    <label for="atividade">Nível de Atividade</label>
+                    <select id="atividade">
+                        <option value="1.2">Sedentário</option>
+                        <option value="1.375">Levemente Ativo</option>
+                        <option value="1.5">Moderadamente Ativo</option>
+                        <option value="1.725">Altamente Ativo</option>
+                        <option value="1.9">Extremamente Ativo</option>
+                    </select>
+            
+                    <button onclick="calcularTMB()">Calcular TMB</button>
+            
+                    <div class="result" id="resultado">
+                        Preencha os dados e clique no botão para calcular.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="js/index.js" async></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>

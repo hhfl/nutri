@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Nutri+</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="agenda" class="page">
+
+                <!-- Top Navbar -->
+                <div class="top-nav">
+                    <a href="#" class="btn-refresh">
+                        <i class="mdi mdi-chat-outline"></i>
+                    </a>
+                    <h1 class="title-logo-1"><span>Nutri</span>+</h1>
+                    <a href="#" class="btn-notification" data-count="2">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>
+                <div class="agenda-container">
+                    <h1>Agenda Interativa</h1>
+                    <form class="agenda-form" onsubmit="adicionarEvento(event)">
+                        <input type="date" id="data" required>
+                        <input type="time" id="hora" required>
+                        <input type="text" id="descricao" placeholder="Descrição do compromisso" required>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                    <ul class="agenda-list" id="agenda-list">
+                        <!-- Compromissos serão exibidos aqui -->
+                    </ul>
+                </div>
+     
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+    <!-- jQuery -->
+    <script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script src="js/index.js" async></script>
+    <script src="cordova.js"></script>
+</body>                

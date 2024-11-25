@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar (Android only) -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>Nutri+</title>
+    <!-- Path to Framework7 Library Bundle CSS -->
+    <link rel="stylesheet" href="lib/framework7-bundle.min.css">
+    <!-- CSS PERSONALIZADO PARA MENU-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--Ícones Material Design-->
+    <link rel="stylesheet" href="css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <!-- App root element -->
+    <div id="app">
+
+        <!-- Your main view, should have "view-main" class -->
+        <div class="view view-main">
+            <!-- Initial Page, "data-name" contains page name -->
+            <div data-name="satisfacao" class="page">
+
+                <!-- Top Navbar -->
+                <div class="top-nav">
+                    <a href="#" class="btn-refresh">
+                        <i class="mdi mdi-chat-outline"></i>
+                    </a>
+                    <h1 class="title-logo-1"><span>Nutri</span>+</h1>
+                    <a href="#" class="btn-notification" data-count="2">
+                        <i class="mdi mdi-bell-outline"></i>
+                    </a>
+                </div>
+
+                <!-- Scrollable page content -->
+                <div class="ferramentas">
+                    <div class="survey-container">
+                        <h1>Como foi sua experiência?</h1>
+                        <div class="icons">
+                            <button onclick="submitFeedback('Bom')">
+                                <img src="https://img.icons8.com/color/96/000000/happy.png" alt="Bom">
+                            </button>
+                            <button onclick="submitFeedback('Bom')">
+                                <img src="https://img.icons8.com/color/96/000000/confused.png" alt="Bom">
+                            </button>
+                            <button onclick="submitFeedback('Ruim')">
+                                <img src="https://img.icons8.com/color/96/000000/sad.png" alt="Ruim">
+                            </button>
+                        </div>
+                        <p class="thank-you" id="thank-you">Obrigado pelo seu feedback!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Path to Framework7 Library Bundle JS-->
+    <script type="text/javascript" src="lib/framework7-bundle.min.js"></script>
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.7.0.min.js"></script>	
+    <!-- Roteamento do app-->
+    <script type="text/javascript" src="js/routes.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="cordova.js"></script>
+</body>
+
+</html>
